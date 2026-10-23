@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU-TU-TU-DU ♡ | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- БЛОК <style>...</style> ИЗ index.html -->
+    <style>
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --soft-pink: #ffe4ec; --medium-pink: #ffb6c1; --dark-pink: #ff69b4; --cream: #fff5f7; --lavender: #e6e6fa; --text-brown: #8b6f6f; }
+        body { font-family: 'Nunito', sans-serif; background-color: var(--cream); background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 182, 193, 0.1) 20px, rgba(255, 182, 193, 0.1) 22px), repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 182, 193, 0.1) 20px, rgba(255, 182, 193, 0.1) 22px); color: var(--text-brown); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; position: relative; }
+        .header-banner { position: relative; background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%); border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3); border: 3px dashed var(--medium-pink); overflow: hidden; }
+        .header-banner::before { content: '🎀'; position: absolute; top: 10px; left: 20px; font-size: 40px; opacity: 0.6; transform: rotate(-15deg); }
+        .header-banner::after { content: '🦋'; position: absolute; top: 10px; right: 20px; font-size: 40px; opacity: 0.6; transform: rotate(15deg); }
+        .banner-content { text-align: center; position: relative; z-index: 2; }
+        .banner-image { width: 100%; max-height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; opacity: 0.8; }
+        .site-title { font-family: 'Pacifico', cursive; font-size: 3em; color: var(--dark-pink); text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); margin-bottom: 10px; }
+        .site-subtitle { font-family: 'Caveat', cursive; font-size: 1.5em; color: var(--text-brown); }
+        .navigation { display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap; }
+        .nav-btn { background: white; border: 2px solid var(--medium-pink); padding: 12px 30px; border-radius: 25px; font-family: 'Nunito', sans-serif; font-size: 0.95em; color: var(--text-brown); cursor: pointer; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2); }
+        .nav-btn:hover { background: var(--soft-pink); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4); }
+        .nav-btn.active { background: var(--dark-pink); color: white; border-color: var(--dark-pink); }
+        .main-grid { display: grid; grid-template-columns: 1fr 25fr 1fr; gap: 25px; margin-top: 30px; }
+        .card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2); border: 2px solid var(--soft-pink); position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--soft-pink), var(--medium-pink), var(--lavender)); }
+        .card-title { font-family: 'Caveat', cursive; font-size: 1.8em; color: var(--dark-pink); margin-bottom: 15px; text-align: center; border-bottom: 2px dashed var(--soft-pink); padding-bottom: 10px; }
+        .profile-img-container { text-align: center; margin-bottom: 15px; }
+        .profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 5px solid var(--soft-pink); box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3); }
+        .profile-name { font-family: 'Pacifico', cursive; font-size: 1.3em; color: var(--dark-pink); margin-top: 10px; }
+        .status-list { list-style: none; padding: 0; }
+        .status-list li { padding: 8px 0; border-bottom: 1px dotted var(--soft-pink); display: flex; align-items: center; gap: 10px; font-size: 0.9em; }
+        .status-icon { font-size: 1.2em; }
+        .social-icons { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+        .social-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--soft-pink); display: flex; align-items: center; justify-content: center; color: var(--dark-pink); text-decoration: none; transition: all 0.3s ease; border: 2px solid var(--medium-pink); }
+        .social-icon:hover { background: var(--dark-pink); color: white; transform: scale(1.1) rotate(10deg); }
+        .welcome-text { background: var(--cream); padding: 20px; border-radius: 10px; border: 2px dashed var(--medium-pink); font-size: 0.95em; line-height: 1.8; margin-bottom: 20px; }
+        .update-item { background: var(--cream); padding: 12px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--medium-pink); font-size: 0.85em; }
+        .update-date { color: var(--dark-pink); font-weight: 600; font-size: 0.9em; }
+        .footer { text-align: center; margin-top: 40px; padding: 20px; font-family: 'Caveat', cursive; font-size: 1.1em; color: var(--text-brown); }
+        .footer-hearts { color: var(--dark-pink); font-size: 1.5em; margin-top: 10px; }
+        .corner-decoration { position: fixed; font-size: 60px; opacity: 0.2; pointer-events: none; z-index: 0; }
+        .corner-top-left { top: 20px; left: 20px; } .corner-top-right { top: 20px; right: 20px; transform: scaleX(-1); }
+        .corner-bottom-left { bottom: 20px; left: 20px; transform: scaleY(-1); } .corner-bottom-right { bottom: 20px; right: 20px; transform: scale(-1); }
+        @media (max-width: 768px) { .main-grid { grid-template-columns: 1fr; } .site-title { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <div class="corner-decoration corner-top-left">🎀</div>
+    <div class="corner-decoration corner-top-right">🦋</div>
+    <div class="corner-decoration corner-bottom-left">🌸</div>
+    <div class="corner-decoration corner-bottom-right">✨</div>
+
+    <div class="container">
+        <header class="header-banner">
+            <img src="https://i.pinimg.com/1200x/a5/d1/79/a5d179f0201fc42ebce109b1a4e3e165.jpg" alt="Pastel banner" class="banner-image">
+            <div class="banner-content">
+                <h1 class="site-title">Angelina's Site</h1>
+                <p class="site-subtitle">(not)welcome to my little corner of the internet ♡</p>
+            </div>
+        </header>
+
+        <!-- МЕНЮ -->
+        <nav class="navigation">
+            <a href="index.html" class="nav-btn">🏠 Home</a>
+            <a href="about.html" class="nav-btn active">🌸 About</a>
+            <a href="gallery.html" class="nav-btn">🎨 Gallery</a>
+            <a href="index.html#contact" class="nav-btn">💌 Contact</a>
+        </nav>
+
+        <div class="main-grid">
+            <!-- Левая колонка (профиль) -->
+            <div class="left-column">
+                <div class="card">
+                    <div class="profile-img-container">
+                        <img src="https://i.pinimg.com/736x/13/6a/8e/136a8eec99fce97295c364f70c59e1f6.jpg" alt="Angelina" class="profile-img">
+                        <div class="profile-name">Angelina</div>
+                    </div>
+                    <div class="status-section">
+                        <ul class="status-list">
+                            <li><span class="status-icon">💅</span> Ну что я здесь могу рассказать о себе..</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Центральная колонка: Обо мне -->
+            <div class="center-column">
+                <div class="card">
+                    <div class="card-title"><span class="sparkle">✦</span> About Me <span class="sparkle">✦</span></div>
+                    <div class="welcome-text">
+                        <p>Привет! Меня зовут Ангелина, и это моя персональная страница в интернете.</p>
+                        <p>Я увлекаюсь веб-разработкой, рисованием и созданием уютных цифровых пространств. Мне нравится экспериментировать с кодом, даже если иногда всё ломается (особенно по ночам).</p>
+                        <p>Этот сайт — мой личный эксперимент и песочница, где я могу быть собой. Здесь нет строгих правил, только пастельные цвета, плохой код и хорошая музыка.</p>
+                        <p style="text-align: center; margin-top: 15px; font-style: italic; color: var(--dark-pink);">
+                            "Это не я писал если что." 🫪
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 30px;">
+                    <div class="card-title">My Vibe</div>
+                    <div style="text-align: center; padding: 10px;">
+                        <img src="https://i.pinimg.com/236x/c9/95/12/c99512bf910e72f5ea7d50d83db9cc4a.jpg" alt="Vibe GIF" style="width: 800px; max-width: 100%; border-radius: 10px; border: 100px solid var(--soft-pink);">
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+
+        <footer class="footer">
+            <p>© Angelina 1999-2026</p>
+            <p>made without <span style="color: var(--dark-pink);">♡</span> and two packs of Kirieshki</p>
+            <div class="footer-hearts">🎀 🦋 ✨ 💕</div>
+        </footer>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() { this.style.transform = 'translateY(-5px)'; this.style.transition = 'transform 0.3s ease'; });
+            card.addEventListener('mouseleave', function() { this.style.transform = 'translateY(0)'; });
+        });
+    </script>
+</body>
+</html>

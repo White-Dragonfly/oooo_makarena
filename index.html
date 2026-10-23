@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU-TU-TU-DU ♡ | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --soft-pink: #ffe4ec; --medium-pink: #ffb6c1; --dark-pink: #ff69b4;
+            --cream: #fff5f7; --lavender: #e6e6fa; --peach: #ffdab9; --text-brown: #8b6f6f;
+        }
+        body {
+            font-family: 'Nunito', sans-serif; background-color: var(--cream);
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 182, 193, 0.1) 20px, rgba(255, 182, 193, 0.1) 22px),
+                              repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 182, 193, 0.1) 20px, rgba(255, 182, 193, 0.1) 22px);
+            color: var(--text-brown); line-height: 1.6;
+        }
+        .lace-border-top {
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,10 Q5,5 10,10 T20,10 T30,10 T40,10 T50,10 T60,10 T70,10 T80,10 T90,10 T100,10' fill='none' stroke='%23ffb6c1' stroke-width='0.5'/%3E%3Cpath d='M0,12 Q5,7 10,12 T20,12 T30,12 T40,12 T50,12 T60,12 T70,12 T80,12 T90,12 T100,12' fill='none' stroke='%23ffb6c1' stroke-width='0.3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x; opacity: 0.5;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; position: relative; }
+        .header-banner {
+            position: relative; background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%);
+            border-radius: 20px; padding: 30px; margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3); border: 3px dashed var(--medium-pink); overflow: hidden;
+        }
+        .header-banner::before { content: '🎀'; position: absolute; top: 10px; left: 20px; font-size: 40px; opacity: 0.6; transform: rotate(-15deg); }
+        .header-banner::after { content: '🦋'; position: absolute; top: 10px; right: 20px; font-size: 40px; opacity: 0.6; transform: rotate(15deg); }
+        .banner-content { text-align: center; position: relative; z-index: 2; }
+        .banner-image { width: 100%; max-height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; opacity: 0.8; }
+        .site-title { font-family: 'Pacifico', cursive; font-size: 3em; color: var(--dark-pink); text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); margin-bottom: 10px; }
+        .site-subtitle { font-family: 'Caveat', cursive; font-size: 1.5em; color: var(--text-brown); }
+        .navigation { display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap; }
+        .nav-btn {
+            background: white; border: 2px solid var(--medium-pink); padding: 12px 30px; border-radius: 25px;
+            font-family: 'Nunito', sans-serif; font-size: 0.95em; color: var(--text-brown); cursor: pointer;
+            transition: all 0.3s ease; text-decoration: none; box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+        }
+        .nav-btn:hover { background: var(--soft-pink); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4); }
+        .main-grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 25px; margin-top: 30px; }
+        .card {
+            background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+            border: 2px solid var(--soft-pink); position: relative; overflow: hidden;
+        }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--soft-pink), var(--medium-pink), var(--lavender)); }
+        .card-title { font-family: 'Caveat', cursive; font-size: 1.8em; color: var(--dark-pink); margin-bottom: 15px; text-align: center; border-bottom: 2px dashed var(--soft-pink); padding-bottom: 10px; }
+        .profile-img-container { text-align: center; margin-bottom: 15px; }
+        .profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 5px solid var(--soft-pink); box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3); }
+        .profile-name { font-family: 'Pacifico', cursive; font-size: 1.3em; color: var(--dark-pink); margin-top: 10px; }
+        .status-list { list-style: none; padding: 0; }
+        .status-list li { padding: 8px 0; border-bottom: 1px dotted var(--soft-pink); display: flex; align-items: center; gap: 10px; font-size: 0.9em; }
+        .status-icon { font-size: 1.2em; }
+        .social-icons { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+        .social-icon {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--soft-pink); display: flex;
+            align-items: center; justify-content: center; color: var(--dark-pink); text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid var(--medium-pink);
+        }
+        .social-icon:hover { background: var(--dark-pink); color: white; transform: scale(1.1) rotate(10deg); }
+        .welcome-text { background: var(--cream); padding: 20px; border-radius: 10px; border: 2px dashed var(--medium-pink); font-size: 0.95em; line-height: 1.8; margin-bottom: 20px; }
+        .welcome-text p { margin-bottom: 10px; }
+        .message-board { background: var(--cream); padding: 20px; border-radius: 10px; min-height: 150px; border: 2px dotted var(--medium-pink); }
+        .update-item { background: var(--cream); padding: 12px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--medium-pink); font-size: 0.85em; }
+        .update-date { color: var(--dark-pink); font-weight: 600; font-size: 0.9em; }
+        .art-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .art-item { position: relative; overflow: hidden; border-radius: 10px; border: 3px solid var(--soft-pink); aspect-ratio: 1; }
+        .art-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .art-item:hover img { transform: scale(1.1); }
+        .treasure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .treasure-item { border-radius: 10px; overflow: hidden; border: 2px solid var(--soft-pink); aspect-ratio: 1; }
+        .treasure-item img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Site Button Styles */
+        .site-button-container {
+            display: flex; justify-content: center; align-items: center; padding: 15px; background: #fffafa;
+            border: 2px dashed #ffb6c1; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;
+            margin: 0 auto; max-width: 130px; user-select: none;
+        }
+        .site-button-container:hover { background: #fff0f5; border-color: #ff69b4; transform: translateY(-3px) scale(1.05); box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4); }
+        .site-button-container:active { transform: translateY(0) scale(0.98); }
+        .site-button-img { max-width: 100px; height: auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3); }
+        .copy-success { color: #ff69b4 !important; font-weight: bold; animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
+
+        /* Music Player Styles */
+        .iframe-wrapper {
+            display: flex; justify-content: center; align-items: center; padding: 15px; background: #fffafa;
+            border: 2px dashed #ffe4e1; border-radius: 15px; margin: 0 auto; max-width: 150px;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .iframe-wrapper:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4); border-color: #ffb6c1; }
+        .iframe-wrapper iframe { border-radius: 10px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05)); }
+
+        .footer { text-align: center; margin-top: 40px; padding: 20px; font-family: 'Caveat', cursive; font-size: 1.1em; color: var(--text-brown); }
+        .footer-hearts { color: var(--dark-pink); font-size: 1.5em; margin-top: 10px; }
+        .sparkle { display: inline-block; animation: sparkle 2s ease-in-out infinite; }
+        @keyframes sparkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+        .corner-decoration { position: fixed; font-size: 60px; opacity: 0.2; pointer-events: none; z-index: 0; }
+        .corner-top-left { top: 20px; left: 20px; }
+        .corner-top-right { top: 20px; right: 20px; transform: scaleX(-1); }
+        .corner-bottom-left { bottom: 20px; left: 20px; transform: scaleY(-1); }
+        .corner-bottom-right { bottom: 20px; right: 20px; transform: scale(-1); }
+
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .site-title { font-size: 2em; }
+            .treasure-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="corner-decoration corner-top-left">🎀</div>
+    <div class="corner-decoration corner-top-right">🦋</div>
+    <div class="corner-decoration corner-bottom-left">🌸</div>
+    <div class="corner-decoration corner-bottom-right">✨</div>
+
+    <div class="container">
+        <header class="header-banner">
+            <img src="https://i.pinimg.com/1200x/a5/d1/79/a5d179f0201fc42ebce109b1a4e3e165.jpg" alt="Pastel banner" class="banner-image">
+            <div class="banner-content">
+                <h1 class="site-title">Angelina's Site</h1>
+                <p class="site-subtitle">(not)welcome to my little corner of the internet ♡</p>
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-btn">🏠 Home</a>
+            <a href="about.html" class="nav-btn">🌸 About</a>
+            <a href="gallery.html" class="nav-btn">🎨 Gallery</a>
+            <a href="#contact" class="nav-btn">💌 Contact</a>
+        </nav>
+
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="card">
+                    <div class="profile-img-container">
+                        <img src="https://i.pinimg.com/736x/13/6a/8e/136a8eec99fce97295c364f70c59e1f6.jpg" alt="Angelina" class="profile-img">
+                        <div class="profile-name">Angelina</div>
+                    </div>
+                    <div class="status-section">
+                        <ul class="status-list">
+                            <li><span class="status-icon">🎨</span> drawing cute things</li>
+                            <li><span class="status-icon">💻</span> programming (questionable)</li>
+                            <li><span class="status-icon">📖</span> reading little silly books</li>
+                            <li><span class="status-icon">🎵</span> listening to spotify</li>
+                            <li><span class="status-icon">🌙</span> night owl</li>
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://discord.gg/JVG83uEM5c" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://i.pinimg.com/736x/24/8d/2f/248d2fa1c080f7eb152d6f82fe31ccb1.jpg" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pin.it/4wPFNm4V8" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="mailto:your@email.com" class="social-icon" title="Написать мне на почту"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">Site Button</div>
+                    <div class="site-button-container" id="copyBtn" 
+                         data-code='https://ru.pinterest.com/pin/814447913932642528/' <img src="https://i.pinimg.com/originals/b5/e6/72/b5e672f6d5ea85547442d88064b39143.gif" alt="Angelina\'s Button" style="border:0; max-width: 100px;"></a>
+                        
+                        <div class="site-button-visual">
+                            <img src="https://i.pinimg.com/originals/b5/e6/72/b5e672f6d5ea85547442d88064b39143.gif" alt="Angelina's Button" class="site-button-img">
+                        </div>
+                    </div>
+                    <p id="copyMessage" style="text-align: center; font-size: 0.8em; margin-top: 10px; color: #d4a5a5; transition: all 0.3s;">
+                        Нажми на котика, чтобы скопировать ссылку! 💕
+                    </p>
+                </div>
+
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">♫ Sound Board</div>
+                    <div style="font-size: 0.85em; margin-bottom: 15px; color: #d4a5a5; text-align: center;">♪ Now Playing: Tu Tu Tu Du!</div>
+                    <div class="iframe-wrapper">
+                        <iframe width="110" height="200" src="https://www.myinstants.com/instant/tu-tu-tu-du-max-verstappen-18834/embed/" frameborder="0" scrolling="no" title="Sound Button"></iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px; font-size: 0.75em; color: #d4a5a5;">
+                        <i class="fas fa-mouse-pointer"></i> ОСТОРОЖНО, ЗЛОЙ НИДЕРЛАНДЕЦ!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Column -->
+            <div class="center-column">
+                <div class="card">
+                    <div class="card-title"><span class="sparkle">✦</span> Welcome <span class="sparkle">✦</span></div>
+                    <div class="welcome-text">
+                        <p>Assalamalekum, this is my website! This is my little corner of the internet and a place where you can learn about my interests, work and projects!</p>
+                        <p>NOT make yourself at home! You are not at home.. And I hate everyone, btw.</p>
+                        <p style="text-align: center; margin-top: 15px; font-style: italic; color: var(--dark-pink);">
+                            This is a test site..<br>Please don't expect much from it. 🫪
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">Message Board</div>
+                    <div class="message-board">
+                        <p style="font-family: 'Caveat', cursive; font-size: 1.2em; color: var(--text-brown);">
+                            Обожаю твои вопросы в час ночи типа: "спишь?"<br> 
+                            <span style="float: right;">От: ебись 🌸</span><br>
+                            <span style="float: right;">Кому: говорю 🌸</span>
+                        </p>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <img src="https://png.pngtree.com/png-vector/20241017/ourmid/pngtree-kawaii-pink-cat-happy-png-image_14101837.png" alt="Cute chibi" style="width: 80px; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">Treasure Box</div>
+                    <p style="text-align: center; margin-bottom: 15px; font-size: 0.9em;">Latest projects I made ♡</p>
+                    <div class="treasure-grid">
+                        <div class="treasure-item"><img src="https://i.pinimg.com/736x/12/72/4d/12724d025ac109496a55299e5ed0b8f9.jpg" alt="Art 1"></div>
+                        <div class="treasure-item"><img src="https://i.pinimg.com/736x/12/72/4d/12724d025ac109496a55299e5ed0b8f9.jpg" alt="Art 2"></div>
+                        <div class="treasure-item"><img src="https://i.pinimg.com/736x/58/36/0c/58360cae5b20da6b97284719b968e480.jpg" alt="Art 3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="card">
+                    <div class="card-title">Programming Languages</div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fab fa-java" style="font-size: 1.5em; color: #f89820;"></i>
+                        <div><div class="update-date">Java</div><div style="font-size: 0.75em; color: #d4a5a5;">Backend & Android</div></div>
+                    </div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fab fa-js-square" style="font-size: 1.5em; color: #f7df1e;"></i>
+                        <div><div class="update-date">JavaScript</div><div style="font-size: 0.75em; color: #d4a5a5;">Web Development</div></div>
+                    </div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5em; color: #7F52FF; font-weight: bold;">K</span>
+                        <div><div class="update-date">Kotlin</div><div style="font-size: 0.75em; color: #d4a5a5;">Android & Backend</div></div>
+                    </div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-code" style="font-size: 1.5em; color: #9b4f96;"></i>
+                        <div><div class="update-date">C#</div><div style="font-size: 0.75em; color: #d4a5a5;">.NET & Unity</div></div>
+                    </div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5em; color: #00599C; font-weight: bold;">C++</span>
+                        <div><div class="update-date">C++</div><div style="font-size: 0.75em; color: #d4a5a5;">Systems & Games</div></div>
+                    </div>
+                    <div class="update-item" style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fab fa-python" style="font-size: 1.5em; color: #3776ab;"></i>
+                        <div><div class="update-date">Python</div><div style="font-size: 0.75em; color: #d4a5a5;">AI & Automation</div></div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">Latest Art</div>
+                    <div class="art-grid">
+                        <div class="art-item"><img src="https://i.pinimg.com/originals/c1/cc/25/c1cc25b9836a195b25b3b22797ef1a70.gif" alt="Latest art"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; font-size: 0.85em;"><a href="gallery.html" style="color: var(--dark-pink); text-decoration: none;">View more in Gallery →</a></p>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-title">Listings</div>
+                    <div style="background: var(--cream); padding: 15px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 10px;">📝</div>
+                        <p style="font-size: 0.9em;">Affiliate buttons & info coming soon!<br>(never i mean)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="lace-border-top" style="margin: 30px 0;"></div>
+            <p>© Angelina 1999-2026</p>
+            <p>made without <span style="color: var(--dark-pink);">♡</span> and two packs of Kirieshki</p>
+            <div class="footer-hearts">🎀 🦋 ✨ 💕</div>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() { this.style.transform = 'translateY(-5px)'; this.style.transition = 'transform 0.3s ease'; });
+            card.addEventListener('mouseleave', function() { this.style.transform = 'translateY(0)'; });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyBtn = document.getElementById('copyBtn');
+            const copyMessage = document.getElementById('copyMessage');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function() {
+                    const codeToCopy = this.getAttribute('data-code');
+                    navigator.clipboard.writeText(codeToCopy).then(() => {
+                        copyMessage.innerText = 'Ссылка успешно скопирована!✨';
+                        copyMessage.classList.add('copy-success');
+                        setTimeout(() => {
+                            copyMessage.innerText = 'Нажми на котика, чтобы скопировать ссылку! 💕';
+                            copyMessage.classList.remove('copy-success');
+                        }, 2500);
+                    }).catch(err => {
+                        console.error('Ошибка копирования: ', err);
+                        copyMessage.innerText = '❌ Ошибка. Скопируйте вручную.';
+                        copyMessage.style.color = '#ff6b6b';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
