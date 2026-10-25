@@ -155,10 +155,10 @@
                         </ul>
                     </div>
                     <div class="social-icons">
-                        <a href="https://discord.gg/JVG83uEM5c" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Discord"><i class="fab fa-discord"></i></a>
-                        <a href="https://i.pinimg.com/736x/24/8d/2f/248d2fa1c080f7eb152d6f82fe31ccb1.jpg" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://pin.it/4wPFNm4V8" target="_blank" rel="noopener noreferrer" class="social-icon" title="Мой Pinterest"><i class="fab fa-pinterest"></i></a>
-                        <a href="mailto:your@email.com" class="social-icon" title="Написать мне на почту"><i class="fas fa-envelope"></i></a>
+                        <a href="https://discord.gg/JVG83uEM5c" target="_blank" rel="noopener noreferrer" class="social-icon" title="My Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://i.pinimg.com/736x/24/8d/2f/248d2fa1c080f7eb152d6f82fe31ccb1.jpg" target="_blank" rel="noopener noreferrer" class="social-icon" title="My Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pin.it/4wPFNm4V8" target="_blank" rel="noopener noreferrer" class="social-icon" title="My Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://i.pinimg.com/736x/5d/df/d5/5ddfd531f094d801c9c4a26273fbbcba.jpg" target="_blank" rel="noopener noreferrer" class="social-icon" title="No.."><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@
                         </div>
                     </div>
                     <p id="copyMessage" style="text-align: center; font-size: 0.8em; margin-top: 10px; color: #d4a5a5; transition: all 0.3s;">
-                        Нажми на котика, чтобы скопировать ссылку! 💕
+                        Click on the kitty to copy the link! 💕
                     </p>
                 </div>
 
@@ -183,7 +183,7 @@
                         <iframe width="110" height="200" src="https://www.myinstants.com/instant/tu-tu-tu-du-max-verstappen-18834/embed/" frameborder="0" scrolling="no" title="Sound Button"></iframe>
                     </div>
                     <div style="text-align: center; margin-top: 15px; font-size: 0.75em; color: #d4a5a5;">
-                        <i class="fas fa-mouse-pointer"></i> ОСТОРОЖНО, ЗЛОЙ НИДЕРЛАНДЕЦ!
+                        <i class="fas fa-mouse-pointer"></i> BEWARE, WILD DUTCHMAN!
                     </div>
                 </div>
             </div>
@@ -291,15 +291,15 @@
                 copyBtn.addEventListener('click', function() {
                     const codeToCopy = this.getAttribute('data-code');
                     navigator.clipboard.writeText(codeToCopy).then(() => {
-                        copyMessage.innerText = 'Ссылка успешно скопирована!✨';
+                        copyMessage.innerText = 'Link successfully copied!✨';
                         copyMessage.classList.add('copy-success');
                         setTimeout(() => {
-                            copyMessage.innerText = 'Нажми на котика, чтобы скопировать ссылку! 💕';
+                            copyMessage.innerText = 'Click on the kitty to copy the link! 💕';
                             copyMessage.classList.remove('copy-success');
                         }, 2500);
                     }).catch(err => {
                         console.error('Ошибка копирования: ', err);
-                        copyMessage.innerText = '❌ Ошибка. Скопируйте вручную.';
+                        copyMessage.innerText = '❌ Error. Please copy manually.';
                         copyMessage.style.color = '#ff6b6b';
                     });
                 });
